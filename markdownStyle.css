@@ -1,0 +1,300 @@
+@include-when-export url('https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i&subset=latin-ext');
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./simple/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 400;
+  src: url("./simple/Roboto-Italic.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./simple/Roboto-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 700;
+  src: url("./simple/Roboto-BoldItalic.ttf");
+}
+
+html {
+  line-height: 1.2;
+  font-size: 16px;
+}
+
+@media print {
+  html {
+    font-size: 10pt;
+  }
+}
+
+@media print {
+  @page {
+    margin: 10mm 0;
+  }
+}
+
+#write {
+  font-family: "Roboto";
+  max-width: 860px;
+  margin: 0 auto;
+  color: #444;
+  counter-reset: h2 h3 h4;
+  /**
+ * YAML front matter is an optional section of valid YAML that is placed at the
+ * top of a page and is used for maintaining metadata for the page and its
+ * contents.
+ */
+}
+
+@media not print {
+  #write {
+    padding: 15mm;
+    padding-bottom: 80vh;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+  }
+}
+
+#write > *:first-child {
+  margin-top: 0;
+}
+
+#write > *:last-child {
+  margin-bottom: 0;
+}
+
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6,
+#write p, #write ol, #write ul, #write blockquote, #write dl, #write table {
+  padding: 0;
+  margin: 0.5rem 0;
+  border: 0;
+  font-size: inherit;
+}
+
+#write h1 {
+  font-size: 30px;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+#write h2 {
+  font-size: 22px;
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+  border-bottom: 1px solid #ddd;
+  counter-increment: h2;
+  counter-reset: h3 h4;
+}
+
+#write h2:not(.md-focus):before {
+  display: inline-block;
+  content: counter(h2);
+  padding-right: 0.5rem;
+  min-width: 3.5rem;
+}
+
+#write h3 {
+  font-size: 18px;
+  margin-top: 1.5rem;
+  margin-bottom: 0.8rem;
+  counter-increment: h3;
+  counter-reset: h4;
+}
+
+#write h3:not(.md-focus):before {
+  display: inline-block;
+  content: counter(h2) "." counter(h3);
+  padding-right: 0.5rem;
+  min-width: 3.5rem;
+}
+
+#write h4 {
+  font-size: 16px;
+  margin-top: 1rem;
+  counter-increment: h4;
+}
+
+#write h4:not(.md-focus):before {
+  display: inline-block;
+  content: counter(h2) "." counter(h3) "." counter(h4);
+  padding-right: 0.5rem;
+  min-width: 3.5rem;
+}
+
+#write h1 tt, #write h1 code, #write h2 tt, #write h2 code, #write h3 tt, #write h3 code, #write h4 tt, #write h4 code, #write h5 tt, #write h5 code, #write h6 tt, #write h6 code {
+  font-size: inherit;
+}
+
+#write h1 + h2,
+#write h2 + h3,
+#write h3 + h4,
+#write h4 + h5,
+#write h5 + h6 {
+  margin-top: 0;
+}
+
+#write hr {
+  box-sizing: content-box;
+  height: 0;
+  margin: 1.5rem 0;
+  border-top: 1px solid #ddd;
+}
+
+#write a {
+  color: #4183C4;
+}
+
+#write blockquote {
+  border-left: 4px solid #ddd;
+  padding: 0 1em;
+  color: #777;
+  line-height: 1.5;
+}
+
+#write pre.md-meta-block {
+  padding: 1rem;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border: 0;
+  border-radius: 3px;
+  color: #777777;
+  margin-top: 0 !important;
+}
+
+#write ol, #write ul {
+  padding-left: 1.2em;
+  margin-bottom: 1rem;
+}
+
+#write ol p, #write ul p {
+  margin: 0;
+}
+
+#write ul ul,
+#write ul ol,
+#write ol ol,
+#write ol ul {
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+#write .md-fences,
+#write code,
+#write tt {
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+  border-radius: 3px;
+  padding: 0;
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  padding: 2px 4px 0px 4px;
+  font-size: 0.9em;
+}
+
+#write .md-fences {
+  margin-bottom: 15px;
+  margin-top: 15px;
+  padding: 0.2em 1em;
+  padding-top: 8px;
+  padding-bottom: 6px;
+}
+
+#write img {
+  border: 1px solid #eee;
+}
+
+#write .md-line > .md-image:only-child,
+#write p > .md-image:only-child {
+  text-align: left;
+}
+
+#write table {
+  padding: 0;
+  word-break: initial;
+}
+
+#write table tr {
+  margin: 0;
+  padding: 0;
+}
+
+#write table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+#write table tr th {
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-bottom: 0;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+#write table tr td {
+  border: 1px solid #ccc;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+#write table tr th:first-child,
+#write table tr td:first-child {
+  margin-top: 0;
+}
+
+#write table tr th:last-child,
+#write table tr td:last-child {
+  margin-bottom: 0;
+}
+
+#write .md-toc {
+  margin: 0.5rem 0;
+}
+
+#write .md-toc a {
+  color: inherit;
+}
+
+#write .md-toc-item {
+  color: inherit;
+}
+
+#write .md-toc-h1 {
+  display: none;
+}
+
+#write .md-toc-h2 {
+  font-weight: bold;
+}
+
+* + #write .md-toc-h2 {
+  margin-top: 0.25rem;
+}
+
+#write .md-toc-h2 .md-toc-inner {
+  margin-left: 0;
+}
+
+#write .md-toc-h3 .md-toc-inner {
+  margin-left: 2em;
+}
+
+#write .md-toc-h4 .md-toc-inner {
+  margin-left: 4em;
+}
+
+#write [mdtype="math_block"] {
+  border: 1px dashed #eee;
+}
