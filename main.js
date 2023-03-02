@@ -1,5 +1,6 @@
 import './style.css'
 import 'highlight.js/styles/atom-one-dark.css'
+import 'github-markdown-css'
 
 import { CodeJar } from 'codejar'
 import { withLineNumbers } from 'codejar/linenumbers.js'

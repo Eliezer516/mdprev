@@ -2,7 +2,9 @@ lockfileVersion: 5.4
 
 specifiers:
   codejar: ^3.7.0
+  github-markdown-css: ^5.2.0
   highlight.js: ^11.7.0
+  markdown-css-smartisan: ^0.0.3
   petrel: ^1.0.7
   showdown: ^2.1.0
   split.js: ^1.6.5
@@ -10,7 +12,9 @@ specifiers:
 
 dependencies:
   codejar: 3.7.0
+  github-markdown-css: 5.2.0
   highlight.js: 11.7.0
+  markdown-css-smartisan: 0.0.3
   petrel: 1.0.7
   showdown: 2.1.0
   split.js: 1.6.5
@@ -269,6 +273,10 @@ packages:
     resolution: {integrity: sha512-yIovAzMX49sF8Yl58fSCWJ5svSLuaibPxXQJFLmBObTuCr0Mf1KiPopGM9NiFjiYBCbfaa2Fh6breQ6ANVTI0A==}
     dev: true
 
+  /github-markdown-css/5.2.0:
+    resolution: {integrity: sha512-hq5RaCInSUZ48bImOZpkppW2/MT44StRgsbsZ8YA4vJFwLKB/Vo3k7R2t+pUGqO+ThG0QDMi96TewV/B3vyItg==}
+    dev: false
+
   /has/1.0.3:
     resolution: {integrity: sha512-f2dvO0VU6Oej7RkWJGrehjbzMAjFp5/VKPp5tTpWIV4JHHZK1/BxbFRtf/siA2SWTe09caDmVtYYzWEIbBS4zw==}
     engines: {node: '>= 0.4.0'}
@@ -286,6 +294,10 @@ packages:
     dependencies:
       has: 1.0.3
     dev: true
+
+  /markdown-css-smartisan/0.0.3:
+    resolution: {integrity: sha512-nHgiPn2yeplHU0RC2PDYEhJpaWksIipGFzDaN3nkB00Bh/vzIzxaUSTOuZ+3rzUV2YQrJkBgn7/znDhwloI+PQ==}
+    dev: false
 
   /nanoid/3.3.4:
     resolution: {integrity: sha512-MqBkQh/OHTS2egovRtLk45wEyNXwF+cokD+1YPf9u5VfJiRdAiRwB2froX5Co9Rh20xs4siNPm8naNotSD6RBw==}
