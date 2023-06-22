@@ -29,4 +29,15 @@ jar.onUpdate(code => {
 	let converter = new showdown.Converter()
 	let htmlConverter = converter.makeHtml(code)
 	document.querySelector('#preview').innerHTML = htmlConverter
+	localStorage.setItem("content", code);
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+	if(localStorage.getItem("content")) {
+		const converter = new showdown.Converter()
+		const htmlConverter = converter.makeHtml(localStorage.getItem("content"))
+		document.querySelector('#preview').innerHTML = htmlConverter
+		jar.updateCode(localStorage.getItem("content"))
+	}
+})
+
